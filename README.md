@@ -1,0 +1,24 @@
+## Medical card
+
+    - You can log in
+        -- There is a test account
+    - base information about
+        -- blood
+            --- type
+            --- pressure
+        -- heart rate
+        -- chronic diseases (with link to the documents list with appropriate filter)
+    - menu
+        -- documents
+            --- List based on visit dates
+            --- filter
+                ---- specialization
+                ---- disease
+                ---- emergency status
+                ---- dates
+        -- personal information
+            --- change
+                ---- password
+                ---- email
+                ---- name, surname
+                ---- phone
