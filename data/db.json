@@ -1,25 +1,47 @@
 {
-  "todos": [
+  "id": "VWjTq3Muxicfg1SllfTIn",
+  "name": "Jhon",
+  "surname": "Lenon",
+  "login": {
+    "username": "JLenon",
+    "password": "1234",
+    "email": "mail@gmail.com",
+    "phone": "00-000-000-00-00"
+  },
+  "blood": {
+    "type": "A",
+    "pressure": "120/90",
+    "heartRate": "80"
+  },
+  "diseases": [
     {
-      "id": "VWjTq3Muxicfg1SllfTIn",
-      "body": "444",
-      "completed": true
+      "name": "diseaseA",
+      "chronic": true
     },
     {
-      "id": "AbrKGqxrIyoKlzkVm5ggr",
-      "body": "11212",
-      "completed": true
+      "name": "diseaseB",
+      "chronic": false
     },
     {
-      "id": "ItXKG_efGsRgJaFHq4ssd",
-      "body": "Gff",
-      "completed": false
-    },
-    {
-      "id": "b7TpStOF_-RyalnrPRIqA",
-      "body": "Gfgfgf",
-      "completed": true
+      "name": "diseaseC",
+      "chronic": true
     }
   ],
-  "timeBlocks": []
+  "docs": [
+    {
+      "link": "somelink",
+      "data": "13.12.2020",
+      "diseases": ["diseaseA", "diseaseB"]
+    },
+    {
+      "link": "somelink",
+      "data": "14.12.2020",
+      "diseases": ["diseaseC"]
+    },
+    {
+      "link": "somelink",
+      "data": "13.12.2020",
+      "diseases": []
+    }
+  ]
 }
