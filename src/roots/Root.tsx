@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useGetUserQuery } from "../services/user";
 
 const navigation = [
   { name: "Dashboard", href: "dashboard" },
@@ -13,6 +14,9 @@ function classNames(...classes: string[]) {
 }
 
 export default function Root() {
+  const { data, error, isLoading } = useGetUserQuery("");
+  console.log(data, error, isLoading);
+
   return (
     <>
       <Disclosure as="nav" className="bg-gray-800">
