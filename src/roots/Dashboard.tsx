@@ -1,14 +1,20 @@
 import { useGetUserQuery } from "../services/user";
 
 export default function Dashboard() {
-  const { name, surname, blood, isFetching } = useGetUserQuery(undefined, {
-    selectFromResult: ({ data, isFetching }) => ({
-      name: data?.name,
-      surname: data?.surname,
-      blood: data?.blood,
-      isFetching,
-    }),
-  });
+  const { name, surname, blood, isFetching, chronicDiseases } = useGetUserQuery(
+    undefined,
+    {
+      selectFromResult: ({ data, isFetching }) => ({
+        name: data?.name,
+        surname: data?.surname,
+        blood: data?.blood,
+        chronicDiseases: data?.diseases.filter(
+          (disease: any) => disease.chronic
+        ),
+        isFetching,
+      }),
+    }
+  );
 
   return (
     <div>
@@ -25,6 +31,12 @@ export default function Dashboard() {
             {blood?.heartRate}
           </p>
           <p>Blood type is {blood?.type}</p>
+          <p>Chronic diseases:</p>
+          <ul>
+            {chronicDiseases?.map((dis: any) => (
+              <li key={dis.id}>{dis.name}</li>
+            ))}
+          </ul>
         </>
       )}
     </div>

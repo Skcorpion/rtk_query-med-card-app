@@ -16,14 +16,17 @@
     },
     "diseases": [
       {
+        "id":"VWjTq3",
         "name": "diseaseA",
         "chronic": true
       },
       {
+        "id":"uxicfg1",
         "name": "diseaseB",
         "chronic": false
       },
       {
+        "id":"llfTIn",
         "name": "diseaseC",
         "chronic": true
       }
