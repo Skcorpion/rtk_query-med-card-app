@@ -1,12 +1,11 @@
 import { useGetUserQuery } from "../services/user";
 
 export default function Dashboard() {
-  const { name, surname, blood, isFetching, chronicDiseases } = useGetUserQuery(
+  const { name, blood, isFetching, chronicDiseases } = useGetUserQuery(
     undefined,
     {
       selectFromResult: ({ data, isFetching }) => ({
         name: data?.name,
-        surname: data?.surname,
         blood: data?.blood,
         chronicDiseases: data?.diseases.filter(
           (disease: any) => disease.chronic
@@ -24,7 +23,7 @@ export default function Dashboard() {
       ) : (
         <>
           <p>
-            Hello, {name} {surname}
+            Hello, {name}
           </p>
           <p>
             Your average blood pressure is {blood?.pressure} and heart rate is{" "}
